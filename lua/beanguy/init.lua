@@ -1,3 +1,4 @@
+require("beanguy.generic")
 require("beanguy.remap")
 require("beanguy.packer")
-print("hello from beanguy")
+print("finished")
