@@ -45,6 +45,14 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
 
+  -- Requires fonts: https://www.nerdfonts.com/font-downloads
+  use {
+  'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
+
   if packer_bootstrap then 
     require('packer').sync()
   end

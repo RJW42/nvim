@@ -1,4 +1,5 @@
 require("beanguy.generic")
 require("beanguy.remap")
 require("beanguy.packer")
+require("beanguy.nvim_tree")
 print("finished")
