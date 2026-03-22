@@ -22,9 +22,11 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
-  -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '0.2.1',
+    requires = {
+        { 'nvim-lua/plenary.nvim'} ,
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
   }
 
 --  use {
@@ -60,6 +62,7 @@ return require('packer').startup(function(use)
   use 'theprimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
+  use 'numToStr/Comment.nvim'
 
   -- Requires fonts: https://www.nerdfonts.com/font-downloads
   use {
