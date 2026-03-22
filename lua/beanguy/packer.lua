@@ -27,12 +27,26 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use { 
-    "rose-pine/neovim", as = "rose-pine",
+--  use {
+--    "rose-pine/neovim", as = "rose-pine",
+--    config = function()
+--        vim.cmd('colorscheme rose-pine')
+--    end
+--  }
+
+  use {
+    "zenbones-theme/zenbones.nvim",
+    requires = {
+      "rktjmp/lush.nvim",
+    },
     config = function()
-        vim.cmd('colorscheme rose-pine')
-    end 
-  } 
+      vim.cmd([[
+        set termguicolors
+        set background=dark
+        colorscheme zenbones
+      ]])
+    end
+  }
 
   use 'ThePrimeagen/vim-be-good'
   
